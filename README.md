@@ -1,2 +1,1 @@
-# bookbot
-Book analysis program built using Python
+BookBot is my first project!
