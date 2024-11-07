@@ -1,9 +1,13 @@
 def main():
+        book_text = get_book_text()
+        book_char_count = count_characters(book_text)
+        report(book_char_count)
+        
+def get_book_text():
     with open("books/frankenstein.txt") as book:
         file_contents = book.read()
-        print(file_contents)
-        word_count(file_contents)
-        count_characters(file_contents)
+        return file_contents
+                
              
 def word_count(book):
     count_of_words = len(book.split())
@@ -19,8 +23,13 @@ def count_characters(book):
             char_count[char] += 1
         else:
             char_count[char] = 1
-        
-    print(char_count)
+                    
+    return(char_count)
+
+def report(char_dict):
+    print("---Beginning book report---")
+    
+
 
 main()
     
